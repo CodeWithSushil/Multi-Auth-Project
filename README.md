@@ -24,7 +24,7 @@ server="localhost"
 port=8080
 
 //sqlite3
-// mysqlite="/app/database/database.sqlite3"
+// sqlite="/app/database/database.sqlite3"
 
 // Database config
 servername="localhost"
