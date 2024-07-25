@@ -1,4 +1,6 @@
 <?php
+phpinfo();
+/*
 declare(strict_types=1);
 define('APP_ROOT', __DIR__);
 
@@ -13,3 +15,5 @@ if(isset($_GET['q'])){
 } else {
   require_once APP_ROOT."/public/index.php";
 }
+
+ */
