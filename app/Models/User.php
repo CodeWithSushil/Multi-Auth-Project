@@ -11,4 +11,8 @@ class User{
         dd($_POST);
         echo "user class";
     }
+
+    public function login(){
+
+    }
 }
