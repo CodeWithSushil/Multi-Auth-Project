@@ -34,5 +34,8 @@ h1 {
 #otp:hover {
   text-decoration: underline;
 }
-
+input{
+    padding: .7em;
+    margin-bottom: .3em;
+}
 /*# sourceMappingURL=style.css.map */

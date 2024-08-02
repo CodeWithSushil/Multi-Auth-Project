@@ -1,19 +1,25 @@
 <?php
-phpinfo();
-/*
-declare(strict_types=1);
-define('APP_ROOT', __DIR__);
+define('APP_ROOT', __dir__);
 
-require_once APP_ROOT."/vendor/autoload.php";
+require_once(APP_ROOT .'/vendor/autoload.php');
 
-if(isset($_GET['q'])){
-  function query($page){
-    require_once APP_ROOT."/public/pages/".$page.".php";
-    return $page;
+// autoloader for namespaced classes 
+spl_autoload_register(function($class)
+{
+  $classFile = str_replace("\\", DIRECTORY_SEPARATOR, $class .'.php');
+  $classPath = APP_ROOT .'/app/'. $classFile;
+  
+  if(file_exists($classPath))
+  {
+    require_once($classPath);
   }
-  query($_GET['q']);
-} else {
-  require_once APP_ROOT."/public/index.php";
-}
+});
 
- */
+session_start();
+
+use App\Services\Router\RouteService;
+
+require_once(APP_ROOT.'/routes/route.php');
+
+$route = new RouteService();
+$route->handle();

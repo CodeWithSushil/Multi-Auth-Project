@@ -6,7 +6,10 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/"
-        }
+        },
+        "files":[
+          "app/Services/Global/Functions.php"
+        ]
     },
     "authors": [
         {
